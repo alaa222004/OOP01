@@ -102,7 +102,7 @@ namespace OOP01
             {
                 if (selectedColor == Colors.Red)
 
-                    Console.WriteLine("primary color "+SColors.Red);
+                   Console.WriteLine("primary color "+Colors.Red);
 
                 else if (selectedColor == Colors.Green)
 
