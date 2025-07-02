@@ -20,6 +20,14 @@ namespace OOP01
     }
     #endregion
 
+    #region Q2
+    public struct Person
+        {
+        public int age;
+        public string name;
+        }
+    #endregion
+
     #region Q3
 
     public enum Seas_on
@@ -65,6 +73,22 @@ namespace OOP01
             //Define a struct "Person" with properties "Name" and "Age". Create an array of three
             //"Person" objects and populate it with data.Then, write a C# program to display the details 
             // of all the persons in the array.
+
+            Person[]per = new Person[3];
+            per[0].name = "alaa";
+            per[0].age = 21;
+            per[1].name = "samir";
+            per[1].age = 22;
+            per[2].name = "esraa";
+            per[2].age = 23; 
+
+            foreach(Person person in per)
+            {
+                Console.WriteLine(person.name);
+                Console.WriteLine(person.age);
+            }
+
+
             #endregion
 
             #region Q3
@@ -116,8 +140,10 @@ namespace OOP01
 
                     Console.WriteLine("Not a primary color.");
 
-                #endregion
+              
             }
+            #endregion
+
 
         }
     }
