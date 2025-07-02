@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Drawing;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
@@ -47,6 +48,15 @@ namespace OOP01
         Green,
         Blue
 
+    }
+    #endregion
+
+    #region Q5
+
+    public struct point
+    {
+        public double x;
+        public double y;
     }
     #endregion
 
@@ -145,6 +155,26 @@ namespace OOP01
             #endregion
 
             #region Q5
+            //Create a struct called "Point" to represent a 2D point with properties "X" and "Y".
+            //Write a C# program that takes two points as input from the user and calculates the
+            //distance between them.
+
+            point p1, p2;
+                p1.x=double.Parse(Console.ReadLine());
+            p1.y = double.Parse(Console.ReadLine());
+                 p2.y=double.Parse(Console.ReadLine());
+            p2.x = double.Parse(Console.ReadLine());
+
+            double dest = Math.Sqrt(Math.Pow(p2.x - p1.x, 2) + Math.Pow(p2.y- p1.y, 2));
+            Console.WriteLine(dest);
+
+
+
+
+
+
+            //d =sqrt (x2−x1)2 + (y2−y1)2
+
             #endregion
 
 
