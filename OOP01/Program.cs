@@ -84,8 +84,8 @@ namespace OOP01
 
             foreach(Person person in per)
             {
-                Console.WriteLine(person.name);
-                Console.WriteLine(person.age);
+                Console.WriteLine($" name: {person.name} age: {person.age}");
+             
             }
 
 
@@ -142,6 +142,9 @@ namespace OOP01
 
               
             }
+            #endregion
+
+            #region Q5
             #endregion
 
 
