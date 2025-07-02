@@ -10,10 +10,10 @@ namespace OOP01
     public enum WeekDays
     {
         Sunday,
-        Monday, 
-        Tuesday, 
+        Monday,
+        Tuesday,
         Wednesday,
-        Thursday, 
+        Thursday,
         Friday,
         Saturday
 
@@ -31,6 +31,17 @@ namespace OOP01
     }
     #endregion
 
+    #region Q4
+
+    public enum Colors
+    {
+        Red,
+        Green,
+        Blue
+
+    }
+    #endregion
+
     internal class Program
     {
         static void Main()
@@ -41,8 +52,8 @@ namespace OOP01
 
 
             foreach (WeekDays day in Enum.GetValues(typeof(WeekDays)))
-            
-             {
+
+            {
                 Console.WriteLine(day);
             }
 
@@ -63,33 +74,52 @@ namespace OOP01
             //displays the corresponding month range for that season. Note range for seasons
             //( spring march to may , summer june to august , autumn September to November , winter December to Februar
 
-            string season_name=Console.ReadLine();
+            string season_name = Console.ReadLine();
 
-            if(season_name == "March" || season_name == "April" || season_name == "May")
+            if (season_name == "March" || season_name == "April" || season_name == "May")
                 Console.WriteLine(Seas_on.Spring);
-            else if(season_name == "June" || season_name == "July" || season_name == "August")
+            else if (season_name == "June" || season_name == "July" || season_name == "August")
                 Console.WriteLine(Seas_on.Summer);
             else
                 Console.WriteLine(Seas_on.Winter);
-            
 
 
 
 
-                //January
-            //February: (فبراير)
-            //March: (مارس)
-            //April: (إبريل)
-            //May: (مايو)
-            //June: (يونيو)
-            //July: (يوليو)
-            //August: (أغسطس)
-            //September: (سبتمبر)
-            //October: (أكتوبر)
-            //November: (نوفمبر)
-            //December
+
+
+            #endregion
+
+            #region Q4
+
+            //Create an enum called "Colors" with the basic colors(Red, Green, Blue) as its 
+            //members.Write a C# program that takes a color name as input from the user and
+            //displays a message indicating whether the input color is a primary color or not.
+
+            string color = Console.ReadLine();
+
+            if (Enum.TryParse(color, true, out Colors selectedColor))
+            {
+                if (selectedColor == Colors.Red)
+
+                    Console.WriteLine("primary color "+SColors.Red);
+
+                else if (selectedColor == Colors.Green)
+
+                    Console.WriteLine("primary color "+Colors.Green);
+
+                else if (selectedColor == Colors.Blue)
+
+                    Console.WriteLine("primary color "+Colors.Blue);
+
+                else
+
+                    Console.WriteLine("Not a primary color.");
 
                 #endregion
+            }
+
         }
     }
 }
+
