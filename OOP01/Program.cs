@@ -21,7 +21,7 @@ namespace OOP01
     }
     #endregion
 
-    #region Q2
+    #region Q2,Q6
     public struct Person
         {
         public int age;
@@ -60,6 +60,8 @@ namespace OOP01
     }
     #endregion
 
+    
+
     internal class Program
     {
         static void Main()
@@ -92,9 +94,9 @@ namespace OOP01
             per[2].name = "esraa";
             per[2].age = 23; 
 
-            foreach(Person person in per)
+            foreach(Person personn in per)
             {
-                Console.WriteLine($" name: {person.name} age: {person.age}");
+                Console.WriteLine($" name: {personn.name} age: {personn.age}");
              
             }
 
@@ -174,6 +176,36 @@ namespace OOP01
 
 
             //d =sqrt (x2−x1)2 + (y2−y1)2
+
+            #endregion
+
+            #region Q6
+            //Create a struct called "Person" with properties "Name" and "Age". Write a C# program 
+            //that takes details of 3 persons as input from the user and displays the name and age of
+            //the oldest person.
+
+            Person[] people = new Person[3];
+
+            for (int i = 0; i <3 ; i++)
+            {
+                people[i].name = Console.ReadLine();
+                people[i].age =int.Parse(Console.ReadLine());
+            }
+            Person oldest = people[0];
+
+            for (int i = 1; i < 3; i++)
+            {
+                if (people[i].age > oldest.age)
+                {
+                    oldest = people[i];
+                }
+            }
+            Console.WriteLine(oldest.name +" " + oldest.age);
+
+
+
+
+
 
             #endregion
 
